@@ -1,0 +1,20 @@
+{
+  "name": "agent-intern-github",
+  "interface": {
+    "displayName": "Agent 实习链路工作台"
+  },
+  "plugins": [
+    {
+      "name": "agent-intern-miner",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-intern-miner"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education"
+    }
+  ]
+}
