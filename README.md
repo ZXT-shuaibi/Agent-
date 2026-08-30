@@ -111,6 +111,49 @@ Agent-/
 
 插件的完整中文使用说明、7 个模块的作用、渐进式披露和证据优先规则，见 [插件 README](plugins/agent-intern-miner/README.md)。
 
+## 生成 bian-intern 风格的独立压缩包
+
+如果你希望像 `bian-intern-plugin.zip` 一样拿到一个单独插件目录，可以从仓库根目录运行：
+
+```powershell
+python .\scripts\build_standalone_plugin.py `
+  --output .\dist\agent-intern-plugin-v1.1.0.zip
+```
+
+压缩包内容为：
+
+```text
+agent-intern-miner/
+├── .codex-plugin/plugin.json       # Codex manifest
+├── .claude-plugin/plugin.json      # Claude Code 兼容 manifest
+├── agents/
+├── profiles/
+├── references/
+├── scripts/
+├── skills/
+└── README.md
+```
+
+它只包含运行所需的插件文件，不包含 `.git`、测试目录、`__pycache__` 或 `.pyc`。插件规则仍以 `plugins/agent-intern-miner/` 为唯一来源，重新运行脚本即可生成最新 zip，避免手工复制造成版本分叉。
+
+### 如何同步到 GitHub
+
+推荐把本仓库根目录同步到 GitHub，因为根目录的 `marketplace.json` 可以让 Codex 直接安装：
+
+```powershell
+git add -A
+git commit -m "Update Agent internship workbench"
+git push origin main
+```
+
+如果要分发独立 zip，可以把生成的 `dist\agent-intern-plugin-v1.1.0.zip` 上传到 GitHub Release 的 Assets，或作为仓库附件保存。不要把 `dist/` 的生成文件反向复制进插件源码目录。
+
+### 独立 zip 怎么安装
+
+- **Codex**：优先使用本仓库的 GitHub marketplace 安装命令。Codex 的 `plugin add` 需要 marketplace 条目；单独 zip 解压后如果要作为本地 marketplace 使用，需按根目录 `marketplace.json` 的结构放入 `plugins/agent-intern-miner/`。
+- **Claude Code 或支持插件目录的平台**：解压后，将 `agent-intern-miner/` 放入平台的插件/skills 目录；压缩包内的 `.claude-plugin/plugin.json` 用于识别插件，`.codex-plugin/plugin.json` 保留 Codex 元数据。
+- **只支持单个 `SKILL.md` 的平台**：读取 `agent-intern-miner/skills/agent-intern/SKILL.md` 作为入口，并保留同级 `references/`、`scripts/` 和其余 skills，不能只复制一个文件。
+
 ## 本地开发安装
 
 如果已经克隆本仓库，也可以把本地 checkout 作为 marketplace：
