@@ -13,3 +13,6 @@ pull-output/
 Thumbs.db
 .idea/
 .vscode/
+
+# Isolated implementation worktrees
+.worktrees/
