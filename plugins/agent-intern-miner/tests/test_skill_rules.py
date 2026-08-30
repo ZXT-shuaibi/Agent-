@@ -30,6 +30,10 @@ class AgentSkillRuleTest(unittest.TestCase):
             "业务承载自然度",
             "高饱和",
             "链路迁移到曼弗业务",
+            "链路能力卡",
+            "选择理由",
+            "淘汰理由",
+            "源码嵌入点",
         ):
             self.assertIn(phrase, text)
 

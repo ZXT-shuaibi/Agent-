@@ -117,7 +117,7 @@ Agent-/
 
 ```powershell
 python .\scripts\build_standalone_plugin.py `
-  --output .\dist\agent-intern-plugin-v1.1.0.zip
+  --output .\dist\agent-intern-plugin-v1.2.0.zip
 ```
 
 压缩包内容为：
@@ -146,7 +146,7 @@ git commit -m "Update Agent internship workbench"
 git push origin main
 ```
 
-如果要分发独立 zip，可以把生成的 `dist\agent-intern-plugin-v1.1.0.zip` 上传到 GitHub Release 的 Assets，或作为仓库附件保存。不要把 `dist/` 的生成文件反向复制进插件源码目录。
+如果要分发独立 zip，可以把生成的 `dist\agent-intern-plugin-v1.2.0.zip` 上传到 GitHub Release 的 Assets，或作为仓库附件保存。不要把 `dist/` 的生成文件反向复制进插件源码目录。
 
 ### 独立 zip 怎么安装
 

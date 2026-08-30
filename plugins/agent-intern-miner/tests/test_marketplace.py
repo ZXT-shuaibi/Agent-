@@ -35,7 +35,7 @@ class MarketplaceTest(unittest.TestCase):
             )
         )
         self.assertEqual(manifest["name"], "agent-intern-miner")
-        self.assertEqual(manifest["version"], "1.1.0")
+        self.assertEqual(manifest["version"], "1.2.0")
 
         skill_dirs = [
             path for path in (PLUGIN_ROOT / "skills").iterdir() if path.is_dir()

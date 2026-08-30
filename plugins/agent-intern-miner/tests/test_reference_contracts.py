@@ -62,6 +62,38 @@ class ReferenceContractTest(unittest.TestCase):
         ):
             self.assertIn(phrase, text)
 
+    def test_high_value_reference_explains_value_evidence_and_carrier_fit(self):
+        text = (ROOT / "references" / "high-value-agent-chains.md").read_text(
+            encoding="utf-8"
+        )
+        for phrase in (
+            "为什么是亮点",
+            "源码证据",
+            "适合融合的业务背景",
+            "最小改造",
+            "可衡量结果",
+            "不能只写",
+        ):
+            self.assertIn(phrase, text)
+        for chain in ("长程任务与持久化编排", "工具调用可靠性与安全边界", "评测与回归体系"):
+            self.assertIn(chain, text)
+
+    def test_carrier_reference_requires_chain_to_business_object_mapping(self):
+        text = (ROOT / "references" / "business-carrier-scenarios.md").read_text(
+            encoding="utf-8"
+        )
+        for phrase in (
+            "链路能力卡",
+            "业务对象",
+            "生命周期",
+            "副作用",
+            "源码嵌入点",
+            "最小重实现",
+            "选择理由",
+            "淘汰理由",
+        ):
+            self.assertIn(phrase, text)
+
 
 if __name__ == "__main__":
     unittest.main()

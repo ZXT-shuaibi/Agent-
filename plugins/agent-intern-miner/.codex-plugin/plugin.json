@@ -1,6 +1,6 @@
 {
   "name": "agent-intern-miner",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Python/LLM/Agent 实习链路挖掘、GitHub 项目验证与证据安全包装工具",
   "author": {
     "name": "knox"
