@@ -1,0 +1,7 @@
+[
+  {
+    "input": "Summarize the ticket",
+    "expected": "The answer cites the ticket source",
+    "grader": "citation_match"
+  }
+]

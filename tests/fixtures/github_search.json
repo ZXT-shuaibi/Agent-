@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "name": "thin-chat-wrapper",
+      "full_name": "example/thin-chat-wrapper",
+      "html_url": "https://github.com/example/thin-chat-wrapper",
+      "description": "A simple LLM chat UI",
+      "stargazers_count": 12000,
+      "language": "Python",
+      "topics": ["llm", "chat"],
+      "updated_at": "2026-01-01T00:00:00Z",
+      "license": {"spdx_id": "MIT"},
+      "readme": "single model call and prompt template"
+    },
+    {
+      "name": "durable-support-agent",
+      "full_name": "example/durable-support-agent",
+      "html_url": "https://github.com/example/durable-support-agent",
+      "description": "Support workflow agent with durable tasks and human approval",
+      "stargazers_count": 850,
+      "language": "Python",
+      "topics": ["agent", "celery", "evaluation", "workflow"],
+      "updated_at": "2026-06-01T00:00:00Z",
+      "license": {"spdx_id": "Apache-2.0"},
+      "readme": "checkpoint resume tool retries eval dataset audit log"
+    },
+    {
+      "name": "durable-support-agent",
+      "full_name": "example/durable-support-agent",
+      "html_url": "https://github.com/example/durable-support-agent/",
+      "description": "Duplicate search result",
+      "stargazers_count": 850,
+      "language": "Python",
+      "topics": ["agent"],
+      "updated_at": "2026-06-01T00:00:00Z",
+      "license": {"spdx_id": "Apache-2.0"},
+      "readme": "checkpoint resume tool retries eval dataset audit log"
+    }
+  ]
+}

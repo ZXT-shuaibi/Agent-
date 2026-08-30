@@ -1,0 +1,23 @@
+{
+  "name": "agent-intern-miner",
+  "version": "1.1.0",
+  "description": "Python/LLM/Agent 实习链路挖掘、GitHub 项目验证与证据安全包装工具",
+  "author": {
+    "name": "knox"
+  },
+  "license": "UNLICENSED",
+  "skills": "./skills",
+  "interface": {
+    "displayName": "Agent 实习链路挖掘",
+    "shortDescription": "Python/Agent 工程链路与项目包装",
+    "longDescription": "从 Python/LLM/Agent 源码和公开 GitHub 项目中提取可复核的工程证据，生成诚实的项目与实习包装方案。",
+    "developerName": "knox",
+    "category": "Education",
+    "capabilities": ["Research", "Code Analysis", "Writing"],
+    "defaultPrompt": [
+      "分析我的 Python Agent 项目并找出高含金量链路",
+      "从 GitHub 筛选可验证的业务型 Agent 项目",
+      "把 Agent 工程证据整理成可面试的项目表达"
+    ]
+  }
+}

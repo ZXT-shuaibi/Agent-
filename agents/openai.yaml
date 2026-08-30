@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent 实习链路挖掘"
+  short_description: "挖掘 Python/Agent 工程链路并生成证据安全的项目包装"
+  default_prompt: "分析我的 Python/Agent 项目，找出高含金量链路并给出可验证的项目包装方案。"
